@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Baygroup\\Ramci\\ApiServiceProvider"
+                "Baygroup\\Ramci\\RamciServiceProvider"
             ],
             "aliases": {
                 "RAMCI": "Baygroup\\Ramci\\RamciApiFacade"
