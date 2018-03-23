@@ -8,6 +8,6 @@ This lLibrary allows to query the RMACI B2B API of  for registered users. You ne
 
 Configuration via the .env file currently allows the following variables to be set:
 
-RAMCI\_BASE\_URL
-RAMCI\_USERNAME
-RAMCI\_PASSWORD
+- RAMCI\_BASE\_URL
+- RAMCI\_USERNAME
+- RAMCI\_PASSWORD
