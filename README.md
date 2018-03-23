@@ -1,6 +1,11 @@
-# RAMCI Api Package
+# RAMCI API Package
 
-This lLibrary allows to query the RMACI B2B API of  for registered users. You need the access details that were provided to you to make any calls to the API.
+This lLibrary allows to query the RMACI B2B API for registered users. 
+
+You need the access details that were provided to you to make any calls to the API.
+For exact parameters in the data array/XML, refer to your offline documentation.
+
+If you do not know what all this is about, then you probably do not need or want this library.
 
 # Configuration
 
