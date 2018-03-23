@@ -69,7 +69,7 @@ class RamciApi
      * @param string $command
      * @return bool|mixed
      *
-     * This function tries to retrieve the report data from RAMCI and returns an associate=ive array with the response;
+     * This function tries to retrieve the report data from RAMCI and returns the XML response
      *
      * In case of a connectino error, it returns FALSE,
      *
@@ -85,12 +85,14 @@ class RamciApi
      * By default the request calls the "report" endpoint you can change to the 'xml' endpoint by sending
      * the optional parameter $command with a value of 'xml' - 'pdf' is not supported by this function
      *
-     * OPTIONAL PARAMETER $sendJSON:
+     * OPTIONAL PARAMETER $sendXML:
      *
-     * If this parameter is set to true, the funcitno will return the data in JSON format
+     * If this parameter is set to false, the funciton will return the data as an 
+     * associative array. The XML tag names are the keys of the array, the XML values 
+     * obviously the data of the array
      *
      */
-    public function getReport($requestXML, $command='report', $sendJSON=false)
+    public function getReport($requestXML, $command='report', $sendXML=true)
     {
         $client     =   new Client();
 
@@ -112,6 +114,10 @@ class RamciApi
             return false;
         }
         $xml        =   simplexml_load_string($response->getBody()->getContents());
+        if ($sendXML)
+        {
+            return $xml->asXML();
+        }
         $json       =   json_encode($xml);
         $reportData =   ($sendJSON) ? $json : json_decode($json,true);
 
