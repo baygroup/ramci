@@ -12,7 +12,7 @@ Configuration via the .env file currently allows the following variables to be s
 - RAMCI\_USERNAME : the username to access the API
 - RAMCI\_PASSWORD : the password to ccess the API
 
-###Example:
+### Example:
 if the urls you have to generate the reports are
 - http://api.endpoint/url/report
 - http://api.endpoint/url/xml
