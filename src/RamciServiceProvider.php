@@ -16,7 +16,7 @@ class RamciServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/ramci/php' => config_path('ramci.php'),
+            __DIR__ . '/../config/ramci.php' => config_path('ramci.php'),
         ], 'ramci');
     }
 
